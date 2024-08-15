@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GoDev: Tutorials & Guides for GoLang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg" style="background-color:#001827;">
+        <div class="container-fluid">
+            <div class="separator" style="clear: both; text-align: center;">
+                <a href="/" style="clear: left; float: left; margin-bottom: 0.5em; margin-right: 1em;">
+                    <img data-original-height="938" data-original-width="20" height="80"
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzDSVFt9JfHLL7zawB5JikV8JJo0WH2fuJSinXJPOSIHO2m7lZflcd5G9W2aOuBYE4sXi5xsdEmLZ8HAdI8d-FYMzWY9Ebg86cGacaKCuAThtB-7kIWve7W_0mkZvET9GHGDRGJJ75KkNM_rXHQjXc9sXGr1hdfPTmyQSaMBEiTB0xnBumbJYww77ShEM/s320/Go-Logo_Blue%20(3).png"
+                        width="70" />
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Start Here</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Learn Go
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Go Tutorials</a></li>
+                            <li><a class="dropdown-item" href="#">DSA</a></li>
+                            <li><a class="dropdown-item" href="#">Web framework</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" action="/search" method="get">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <main class="container">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+
+            </h3>
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">Variables in Go/Golang</h2>
+                <p class="blog-post-meta">July 7, 2024 by <a href="/">GoDev</a></p>
+
+                <p style="text-align: left;"><span style="font-family: verdana;">Hi, Today we will learn about the
+                        variable and how to declare variables on Go/Golang.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">Variables are the name assigned to the memory
+                        location where your data will be stored.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">Variables help us to store and retrieve the
+                        data.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">There are four types of Data types in which a
+                        variable can store data <b>Int, Float32,Strings and boolean.</b>
+                        <o:p></o:p>
+                    </span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>Int: </b>Int or Integer store whole numbers
+                        like 245,11,09,etc. It can’t store floating point numbers like 1.2,45.6 etc.<o:p></o:p></span>
+                </p>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>Float32: </b>Float32 store numbers with
+                        points such as 3.6,567.6,9.1 etc. It store only numbers with floating point.<o:p></o:p></span>
+                </p>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>String:</b>&nbsp;Strings store characters
+                        and special characters such as “apple”,”cat”,”*’,”&amp;”,”Hello” etc.<o:p></o:p></span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>Boolean: </b>It stores simply true and
+                        false. It doesn’t store anything it’s just boolean which means true and false.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">First, Let’s see how we declare variables. We
+                        use <b>“Var”</b> and<b> “Const</b>” to declare variables.<o:p></o:p></span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">Var is used to declare variables which value
+                        can be changed later. You can see in example below.</span></p>
+                <div style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">package</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;main</span></span>
+                </div>
+                <div style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="color: white; font-family: verdana;"><span
+                            style="font-size: 14px;"><br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">import</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"fmt"<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">func</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">main</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">()
+                            {<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">var</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">score</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">int</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">32<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">var</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">name</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">string</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"Golang"<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">var</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Temp</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">float32</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">34.6<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Printf</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"Score
+                            value before changing:</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">%v</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">,score)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">score</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">=</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">68<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Printf</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"Score
+                            value after changing:</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">%v</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">,score)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp;<br /> </span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Println</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(name)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Printf</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"Todays
+                            temprature is : </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">%v</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">,
+                            Temp)<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">}</span></span>
+                </div>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>Output:</b></span></p>
+                <p style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;">C:\Users\HP\Desktop\Go lang articles\data
+                            types&gt;go run "c:\Users\HP\Desktop\Go lang articles\data
+                            types\main.go"<br /></span></span><span style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;">Score value before
+                            changing:32<br /></span></span><span style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;">Score value after
+                            changing:68<br /></span></span><span style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;">Golang<br /></span></span><span
+                        style="font-family: verdana;"><span style="color: white; font-size: 10.5pt;">Todays temprature
+                            is : 34.6</span></span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">Here you can see in starting I declare<b>
+                            ‘score’</b> as Int whose value is 32. And later I changed the value with 68. And in output
+                        you can see it changed. With that I hope you also leaned how to declare a variable.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">Now let’s see how const work.<o:p></o:p></span>
+                </p>
+                <p style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">package</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;main<br /></span></span><span
+                        style="color: white; font-size: 10.5pt;"><span
+                            style="font-family: verdana;">&nbsp;<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">import</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"fmt"<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">func</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">main</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">()
+                            {<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">const</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;marks
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">int</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">100<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">var</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">fruit</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">string</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"apple"<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">var</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">interest</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">float32</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">34.6<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Printf</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"Marks
+                            value before changing:</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">%v</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">\n</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">,
+                            marks)<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">marks</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">68<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Printf</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"Marks
+                            value after changing:</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">%v</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">\n</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">,
+                            marks)<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Println</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(fruit)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Printf</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"Interest
+                            rate : </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">%v</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">,
+                            interest)<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">}</span></span>
+                </p>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>Output:</b></span></p>
+                <p style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;">C:\Users\HP\Desktop\Go lang articles\data
+                            types&gt;go run "c:\Users\HP\Desktop\Go lang articles\data
+                            types\main.go"<br /></span></span><span style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;"># command-line-arguments<br /></span></span><span
+                        style="font-family: verdana;"><span style="color: white; font-size: 10.5pt;">.\main.go:11:2:
+                            cannot assign to marks (constant 100 of type int)</span></span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">Now as you can see in output it gave a warning
+                        that <b>“marks”</b> variable’s value can’t be changes because it’s a constant.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">We use it to store the value which we won’t
+                        need to change in future.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">We saw how declaration work. Let see how
+                        boolean work as well.<o:p></o:p></span></p>
+                <p style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">package</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;main<br /></span></span><span
+                        style="color: white; font-size: 10.5pt;"><span
+                            style="font-family: verdana;">&nbsp;<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">import</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"fmt"<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">func</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">main</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">()
+                            {<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">var</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">x</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">bool<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">var</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">y</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">bool<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Println</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(x)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Println</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(y)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">}</span></span>
+                </p>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>Output:</b></span></p>
+                <p style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;">C:\Users\HP\Desktop\Go lang articles\data
+                            types&gt;go run "c:\Users\HP\Desktop\Go lang articles\data
+                            types\main.go"<br /></span></span><span style="font-family: verdana;"><span
+                            style="color: white; font-size: 10.5pt;">false<br /></span></span><span
+                        style="font-family: verdana;"><span style="color: white; font-size: 10.5pt;">false</span></span>
+                </p>
+                <p class="MsoNormal"><span style="font-family: verdana;">In output we got <b>“False”</b>. Why? Because
+                        the variables <b>X</b> and <b>Y</b> have not stored any data. And when a variable don’t have
+                        stored any data in it, it’s value is <b>0</b> which is false in boolean. Boolean give two values
+                        True and False. Here <b>‘0’</b> is false and <b>‘1’ </b>is true.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">If a variables has data &nbsp;0 means<b>
+                            false</b>&nbsp;and any non-zero data is considered as <b>True</b> in Boolean.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">One more thing, In Go/Golang we also have short
+                        hand operator to assign a variable <b>‘:=’</b>. See in example to know in detail.<span
+                            style="background: rgb(30, 30, 30); color: white; font-size: 10.5pt;">
+                            <o:p></o:p>
+                        </span></span></p>
+                <p style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="background: rgb(30, 30, 30); color: white; font-size: 10.5pt;">package</span><span
+                            style="background: rgb(30, 30, 30); color: white; font-size: 10.5pt;">&nbsp;main
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /></span></span><span
+                        style="color: white; font-size: 10.5pt;"><span
+                            style="font-family: verdana;">&nbsp;<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">import</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"fmt"<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">func</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">main</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">()
+                            {<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">fruit</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;:=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">"apple"<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Score</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;:=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">80<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Temp</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;:=
+                        </span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">35.6<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Println</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(fruit)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Println</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(Score)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">&nbsp;
+                            &nbsp; fmt.</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">Println</span><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">(Temp)<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">}</span></span>
+                </p>
+                <p class="MsoNormal"><span style="font-family: verdana;"><b>Output:</b></span></p>
+                <div style="background: rgb(30, 30, 30); line-height: 14.25pt; text-align: left;"><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">C:\Users\HP\Desktop\Go
+                            lang articles\data types&gt;go run "c:\Users\HP\Desktop\Go lang articles\data
+                            types\main.go"<br /></span></span><span style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">apple<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">80<br /></span></span><span
+                        style="font-family: verdana;"><span
+                            style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;">35.6<br /></span></span><span
+                        style="background-attachment: initial; background-clip: initial; background-image: initial; background-origin: initial; background-position: initial; background-repeat: initial; background-size: initial; color: white; font-size: 10.5pt;"><span
+                            style="font-family: verdana;">&nbsp;</span></span><span
+                        style="background-color: transparent; font-family: verdana;">&nbsp;</span></div>
+                <p class="MsoNormal"><span style="font-family: verdana;">As you see by using a short hand operator
+                        <b>‘:=’</b> we can assign value without declaring it’s data types.<o:p></o:p></span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">Compiler automatically assign the data type of
+                        variable according to the data stored in that.</span></p>
+                <p class="MsoNormal"><span style="font-family: verdana;">So that’s it for this chapter. In next chapter
+                        we will study about data types in details.</span><span style="font-family: Calibri;">
+                        <o:p></o:p>
+                    </span></p>
+        </div>
+</body>
+<footer class="text-body-secondary py-5">
+    <div class="container">
+        <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">GoDev © 2024</p>
+        <p class="mb-0"><a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/privacy-policy">Privacy
+                Policy</a></p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

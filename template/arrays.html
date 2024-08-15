@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GoDev: Tutorials & Guides for GoLang</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <nav class="navbar navbar-expand-lg" style="background-color:#001827;">
+        <div class="container-fluid">
+            <div class="separator" style="clear: both; text-align: center;">
+                <a href="/" style="clear: left; float: left; margin-bottom: 0.5em; margin-right: 1em;">
+                    <img data-original-height="938" data-original-width="20" height="80"
+                        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzDSVFt9JfHLL7zawB5JikV8JJo0WH2fuJSinXJPOSIHO2m7lZflcd5G9W2aOuBYE4sXi5xsdEmLZ8HAdI8d-FYMzWY9Ebg86cGacaKCuAThtB-7kIWve7W_0mkZvET9GHGDRGJJ75KkNM_rXHQjXc9sXGr1hdfPTmyQSaMBEiTB0xnBumbJYww77ShEM/s320/Go-Logo_Blue%20(3).png"
+                        width="70" />
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Start Here</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Learn Go
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Go Tutorials</a></li>
+                            <li><a class="dropdown-item" href="#">DSA</a></li>
+                            <li><a class="dropdown-item" href="#">Web framework</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" action="/search" method="get">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <main class="container">
+        <div class="col-md-8">
+            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+
+            </h3>
+            <article class="blog-post">
+                <h2 class="display-5 link-body-emphasis mb-1">Arrays in Go/Golang</h2>
+                <p class="blog-post-meta">July 7, 2024 by <a href="/">GoDev</a></p>
+
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span style="font-family: verdana;">Hi,
+                        Today in this chapter we will learn about<b><span style="color: red;"> Arrays</span></b> in
+                        Go/Golang. In Go we use Arrays to store multiple data in a singe variables. You can store all
+                        types of data in Arrays.<br /></span><span
+                        style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">Arrays is
+                        one of powerful way to store multiple data without declaring lots of variables. We use arrays a
+                        lot in programming. Although in Go we commonly use slices but in special scenario we also use
+                        arrays.<br /></span><span style="font-family: verdana;">&nbsp;<br /></span><span
+                        style="font-family: verdana;">There are two way to create an array. First is by syntax code and
+                        second is with short hand operator “:=”.<br /></span><span
+                        style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">Let see how
+                        to declare array with syntax code.</span></p>
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span
+                        style="font-family: verdana;"><br /></span></p>
+                <div class="separator" style="clear: both; text-align: center;"><a
+                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbf5heBqKAMHRzqZGgThCbN2x0hZo01GXcvq7FBHOhFwjpTSkhHDFofiZd_Hg-icI0N-iezkHV5KTAudzMGSvcbZvJMZS2hr-4V09GsPDGHmAEp366ewsKame278wjR76E8ZucyaL6QN0JWTIHy1dbV-wKsaaxzf9bA8oypnh7BsGgwQd0xfzKjKwewnQ/s978/Picture1.png"
+                        imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                            data-original-height="453" data-original-width="978" height="296"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbf5heBqKAMHRzqZGgThCbN2x0hZo01GXcvq7FBHOhFwjpTSkhHDFofiZd_Hg-icI0N-iezkHV5KTAudzMGSvcbZvJMZS2hr-4V09GsPDGHmAEp366ewsKame278wjR76E8ZucyaL6QN0JWTIHy1dbV-wKsaaxzf9bA8oypnh7BsGgwQd0xfzKjKwewnQ/w640-h296/Picture1.png"
+                            width="640" /></a></div><br /><span style="font-family: verdana;"><br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span
+                    style="font-family: verdana;"><b>Output:</b></span>
+                <p></p>
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span
+                        style="font-family: verdana;"><b><br /></b></span></p>
+                <div class="separator" style="clear: both; text-align: center;"><a
+                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn-f6aC6eXpFPPzujSU48hy7Fku0G2_vlOc2gdSanejC_bEg8ygXd-SkdlszW5iSx3W15k8m8iDKQAvo3l5FnBZSsbN03IZf4h1q-LV3HzRqqyUVqr_ysz54BnD9ogT4aUb6-tA-zd-3N68pXx-gGKoPIdUucxjblSLSm70G6FUgDTPBDOANbiM0hp33s/s811/Picture2.png"
+                        imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                            data-original-height="197" data-original-width="811" height="156"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgn-f6aC6eXpFPPzujSU48hy7Fku0G2_vlOc2gdSanejC_bEg8ygXd-SkdlszW5iSx3W15k8m8iDKQAvo3l5FnBZSsbN03IZf4h1q-LV3HzRqqyUVqr_ysz54BnD9ogT4aUb6-tA-zd-3N68pXx-gGKoPIdUucxjblSLSm70G6FUgDTPBDOANbiM0hp33s/w640-h156/Picture2.png"
+                            width="640" /></a></div><br /><span style="font-family: verdana;"><br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">As we can see
+                    in example, the syntax to declare the array is var arr = [5]int{1,6,8,9,10}.</span>
+                <p></p>
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span
+                        style="font-family: verdana;"><br /></span><span style="font-family: verdana;">In this example,
+                        we declared a variable with <b>'Var'</b> and named it<b> arr</b>. And i</span><span
+                        style="font-family: verdana;">n [],&nbsp;</span><span style="font-family: verdana;">we entered
+                        the length of elements it can store which is 5 after that we declared it’s data type “int” and
+                        the data in {}.</span></p>
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span
+                        style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">The amount
+                        of data or elements you can store in an array is limited. If you allotted 5 length to store data
+                        it will store only 5 elements.<br /></span><span
+                        style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">Now see
+                        other way to declare an array.</span></p>
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span
+                        style="font-family: verdana;"><br /></span></p>
+                <div class="separator" style="clear: both; text-align: center;"><a
+                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2Yaxd5WTAtcBcNjUuWhbMBKEYyyp1Rxeuj9EoGSk25bNh840C3AG4Wb_lXfTE6Q0iPa9-z8uVf7r7w6gOr_TfYyMN1hiUDVMeQB4ns7MS3NjMBWeFoKxJNFG939wrJG_lbcM_gtrUp-X5Ebbq_2I18UfPzQ76VB6ob-z7O_KlPeaH5Vs6y2ujtTMniLE/s1020/Picture3.png"
+                        imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                            data-original-height="466" data-original-width="1020" height="292"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2Yaxd5WTAtcBcNjUuWhbMBKEYyyp1Rxeuj9EoGSk25bNh840C3AG4Wb_lXfTE6Q0iPa9-z8uVf7r7w6gOr_TfYyMN1hiUDVMeQB4ns7MS3NjMBWeFoKxJNFG939wrJG_lbcM_gtrUp-X5Ebbq_2I18UfPzQ76VB6ob-z7O_KlPeaH5Vs6y2ujtTMniLE/w640-h292/Picture3.png"
+                            width="640" /></a></div><span style="font-family: verdana;"><br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">As you see
+                    everything is same except the <b>‘:=’</b>. This time we didn’t used Var instead we used
+                    <b>‘:=’</b>.<br /></span><span style="font-family: verdana;">&nbsp;<br /></span><span
+                    style="font-family: verdana;">I hope you know now how to make an array. Now then let’s see some
+                    other things we can do we an array.</span>
+                <p></p>
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span
+                        style="font-family: verdana;"><br /></span></p>
+                <div class="separator" style="clear: both; text-align: center;"><a
+                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyicgXPRFov4LXe9sH9E4dCM4fALT7EQ8dZ79fU_vg4EGAtrFv8WAKmzGpK1ylaeahOEmdXztDNv39wcwe0ElviDKJNdFzas7kq1wwdWR8-QMwPewLKm7SnHq2bC1mRVOGX8VUJS9sevAgkVt7FVaW4F9YaJqCAjRV5P592L0CJFslC8pdWZo1DRMl_2U/s1006/Picture4.png"
+                        imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                            data-original-height="669" data-original-width="1006" height="426"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgyicgXPRFov4LXe9sH9E4dCM4fALT7EQ8dZ79fU_vg4EGAtrFv8WAKmzGpK1ylaeahOEmdXztDNv39wcwe0ElviDKJNdFzas7kq1wwdWR8-QMwPewLKm7SnHq2bC1mRVOGX8VUJS9sevAgkVt7FVaW4F9YaJqCAjRV5P592L0CJFslC8pdWZo1DRMl_2U/w640-h426/Picture4.png"
+                            width="640" /></a></div><br /><span style="font-family: verdana;"><br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">In this example
+                    I made an empty array with located 5 slots with can store only 5 elements. First I stored one
+                    element 90 at position 0. When I printed array it showed that my data is stored but the rest 2 empty
+                    places array filled with value 0.<br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">When we make an
+                    empty array we don’t use assigned operator like you see in example.<br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">After I stored
+                    all elements in array it showed in output that array replaced 0 with the data I told it to
+                    store.<br /></span><span style="font-family: verdana;">&nbsp;<br /></span><span
+                    style="font-family: verdana;">And I also to check the length of array by using len() which told me
+                    how many elements I can store in it.<br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">There are many
+                    cases when we don’t know that how much elements or data you may need to store. In this case we put
+                    ‘…’ in place of length as you can see in example:</span>
+                <p></p>
+                <p style="text-align: justify; text-justify: inter-ideograph;"><span
+                        style="font-family: verdana;"><br /></span></p>
+                <div class="separator" style="clear: both; text-align: center;"><a
+                        href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJHNfMSCdrowaMyzzcyNM122MKDzgJGlp_w1sh9RPeQNTLuS063xZYcKZ1MzUE0G-CVIFupx78_CGaXMrBC98TAYmst4Z2-RQ1ucW2Tgwm8qWz6-4iJ4eX_idQ18dFfNFL6UjMa344MJSQNxaxkyDzr6IjbuT9Ul29oQozfnAdPUJflId5Urv0MhqUgd8/s1003/Picture5.png"
+                        imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0"
+                            data-original-height="630" data-original-width="1003" height="402"
+                            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJHNfMSCdrowaMyzzcyNM122MKDzgJGlp_w1sh9RPeQNTLuS063xZYcKZ1MzUE0G-CVIFupx78_CGaXMrBC98TAYmst4Z2-RQ1ucW2Tgwm8qWz6-4iJ4eX_idQ18dFfNFL6UjMa344MJSQNxaxkyDzr6IjbuT9Ul29oQozfnAdPUJflId5Urv0MhqUgd8/w640-h402/Picture5.png"
+                            width="640" /></a></div><span style="font-family: verdana;"><br /></span><span
+                    style="font-family: verdana;">This way we can store many elements with limiting the array. And it
+                    won’t take unnecessary memory and fill with 0 as we saw in previous example.<br /></span><span
+                    style="font-family: verdana;">&nbsp;<br /></span><span style="font-family: verdana;">So that’s it
+                    for this chapter. In next chapter we will learn about slices.<br /></span><span
+                    style="font-family: verdana;">&nbsp;</span>
+                <p></p>
+            </article>
+
+            <nav class="blog-pagination" aria-label="Pagination">
+                <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+                <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+            </nav>
+
+        </div>
+</body>
+<footer class="text-body-secondary py-5">
+    <div class="container">
+        <p class="float-end mb-1">
+            <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">GoDev © 2024</p>
+        <p class="mb-0"><a href="/about">About</a> | <a href="/contact">Contact</a> | <a href="/privacy-policy">Privacy
+                Policy</a></p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
