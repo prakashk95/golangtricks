@@ -29,13 +29,6 @@ var posts = []Post{
 	{Title: "Arrays in Go", Routes: "/arrays"},
 }
 
-func home(c *gin.Context) {
-	fmt.Println("Posts:", posts)
-	c.HTML(http.StatusOK, "index.html", gin.H{
-		"posts": posts,
-	})
-}
-
 func blog(c *gin.Context) {
 	c.HTML(http.StatusOK, "blog.html", nil)
 }
@@ -106,7 +99,12 @@ func main() {
 		fmt.Println("Template file:", file.Name())
 	}
 
-	r.GET("/", home)
+	r.GET("/", func(c *gin.Context) {
+		fmt.Println("Posts:", posts)
+		c.HTML(http.StatusOK, "index.html", gin.H{
+			"posts": posts})
+	})
+
 	r.GET("/hello-world", helloworld)
 	r.GET("/blog", blog)
 	r.GET("/learn", learn)
