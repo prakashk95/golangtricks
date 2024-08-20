@@ -87,7 +87,7 @@ func main() {
 	}
 
 	r := gin.Default()
-	r.LoadHTMLGlob("template/")
+	r.LoadHTMLGlob("template/*")
 	dir, _ := os.Getwd()
 	fmt.Println("Current working directory:", dir)
 
