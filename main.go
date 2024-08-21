@@ -91,7 +91,7 @@ func main() {
 	dir, _ := os.Getwd()
 	fmt.Println("Current working directory:", dir)
 
-	files, err := os.ReadDir("template/*")
+	files, err := os.ReadDir("template/")
 	if err != nil {
 		log.Fatal("Error reading template directory:", err)
 	}
