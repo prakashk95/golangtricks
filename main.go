@@ -98,7 +98,7 @@ func main() {
 	for _, file := range files {
 		fmt.Println("Template file:", file.Name())
 	}
-
+	//
 	r.GET("/", func(c *gin.Context) {
 		fmt.Println("Posts:", posts)
 		c.HTML(http.StatusOK, "index.html", gin.H{
